@@ -1,4 +1,4 @@
-package com.example.nearbyglasses
+package ch.pocketpc.nearbyglasses
 
 import android.content.Context
 
@@ -38,3 +38,4 @@ object Settings {
             .apply()
     }
 }
+
