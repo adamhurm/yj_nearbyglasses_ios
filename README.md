@@ -9,8 +9,8 @@ This app notifies you when smart glasses are nearby. It uses company identificat
 The app’s author [Yves Jeanrenaud](https://yves.app) takes no liability whatsoever for this app nor it’s functionality. Use at your own risk. By technical design, detecting Bluetooth LE devices might sometimes just not work as expected. I am no graduated developer. This is all written in my free time and with knowledge I tought myself.<br/>
 **False positives are likely.** This means, the app *Nearby Glasses* may notify you of smart glasses nearby when there might be in fact a VR headset of the same manufacturer or another product of that company’s breed. It may also miss smart glasses nearby. Again: I am no pro developer.<br/>
 However, this app is free and open source (foss), you may review the code, change it and re-use it (under the [license](LICENSE)).<br/>
-The app *Nearby Glasses* does not store any details about you or collects any information about you or your phone. There is no telemetry, no ads, and no other nuissance. If you install the app via Play Store, Google may know something about you and collect some stats. But the app itsself does not. <br/>
-If you choose to store (export) the logfile, that is completely up to you and your liability where this data go to. The logs are recorded only locally and not automatically shared with anyone.<br/>
+The app *Nearby Glasses* does not store any details about you or collects any information about you or your phone. There are no telemetry, no ads, and no other nuisance. If you install the app via Play Store, Google may know something about you and collect some stats. But the app itsself does not. <br/>
+If you choose to store (export) the logfile, that is completely up to you and your liability where this data go to. The logs are recorded only locally and not automatically shared with anyone. They do contain little sensitive data; in fact, only the manufacturer ID codes of BTLE devices encountered.<br/>
 <br/>
 **Use with extreme caution!** As stated before: There is no guarantee, detected smart glasses are really nearby. It might be another device looking technically (on the BTLE adv level) similar to smart glasses.<br/>
 Please do not act rashly. **Think before you act upon any messages** (not only from this app).<br/>
@@ -85,7 +85,7 @@ RSSI drops roughly according to<br/>
 - **It's now working in the lab!** I need to debug it more with actuall smart glasses in the field.
 - See [Releases](https://github.com/yjeanrenaud/yj_nearbyglasses/releases) for APK to download. 
 - I will push this app to Google Play, too. I still have some developer certificate around I could use for that. I will also always publish releases  here on GitHub and elsewhere for those that avoid the Play Store.
-- I am no BT or Android expert at all. For what I've learned, one could also dig deeper into the communication of the Meta Ray-Bans sniffing the BTLE traffic. By that, we would not need to rely on the device powering up or connecting bout could also use heurisitcs on the encrypted traffic transimssions without much false positives. But I haven't looked into BT traffic packets for more than ten years. I'm glad I remembered ADV frames...
+- I am no BT or Android expert at all. For what I've learned, one could also dig deeper into the communication of the smart glasses by sniffing the BTLE traffic. By doing so, we would likely not need to rely on the device behaving according to the BT specifications, but could also use heurisitcs on the encrypted traffic transimssions without much false positives. But I haven't looked into BT traffic packets for more than ten years. I'm glad I remembered ADV frames...
 - move all hard-coded texts into `strings.xml` for easier localisation.
 - add **more manufacturers IDs** of smart glasses. Right now, it's mostly Meta.
 - an iOS app would be easy to adapt, too. But I don't have the toolchain at hands right now.
