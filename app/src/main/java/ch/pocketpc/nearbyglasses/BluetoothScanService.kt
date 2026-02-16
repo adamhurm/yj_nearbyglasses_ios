@@ -43,7 +43,7 @@ class BluetoothScanService : Service() {
     override fun onBind(intent: Intent?): IBinder {
         return binder
     }
-    
+
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         when (intent?.action) {
             ACTION_START_SCAN -> startForegroundService()
@@ -185,7 +185,7 @@ class BluetoothScanService : Service() {
     
     companion object {
         private const val TAG = "BluetoothScanService"
-        const val ACTION_START_SCAN = "com.raybandetector.START_SCAN"
-        const val ACTION_STOP_SCAN = "com.raybandetector.STOP_SCAN"
+        const val ACTION_START_SCAN = "ch.pocketpc.nearbyglasses.START_SCAN"
+        const val ACTION_STOP_SCAN = "ch.pocketpc.nearbyglasses.STOP_SCAN"
     }
 }

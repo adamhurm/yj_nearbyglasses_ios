@@ -19,7 +19,7 @@
     <!-- Foreground service permission (Android 9+) -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE"
-        tools:targetApi="34" />
+        tools:targetApi="35" /><!-- 34 is not sufficient for Play Store -->
     
     <!-- Post notifications permission (Android 13+) -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />

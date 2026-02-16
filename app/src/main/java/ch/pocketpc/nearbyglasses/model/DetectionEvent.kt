@@ -47,10 +47,12 @@ data class DetectionEvent(
         const val META_COMPANY_ID1 = 0x01AB
         const val META_COMPANY_ID2 = 0x058E
 
-        // EssilorLuxottica - Placeholder, actual ID needs verification
+        // EssilorLuxottica - needs more verification, but OAKLEY and some Meta models likely have that
         const val ESSILOR_COMPANY_ID = 0x0D53
-        
-        fun isMetaRayBan(
+        //Snap (Snapchat) Spectacles
+        const val SNAP_COMPANY_ID = 0x0D53
+
+        fun isSmartGlasses(
             companyId: Int?,
             deviceName: String?
         ): Pair<Boolean, String> {
@@ -65,7 +67,11 @@ data class DetectionEvent(
             }
 
             if (companyId == ESSILOR_COMPANY_ID && ESSILOR_COMPANY_ID != 0x0D53) {
-                reasons.add("EssilorLuxottica Company ID")
+                reasons.add("EssilorLuxottica Company ID (0x0D53)")
+            }
+
+            if (companyId == SNAP_COMPANY_ID) {
+                reasons.add("Snap Company ID (0x03C2 )")
             }
             
             // Check device name

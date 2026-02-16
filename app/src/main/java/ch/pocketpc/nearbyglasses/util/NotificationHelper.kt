@@ -17,8 +17,8 @@ class NotificationHelper(private val context: Context) {
     private val notificationManager = NotificationManagerCompat.from(context)
     
     companion object {
-        const val CHANNEL_ID_DETECTION = "rayban_detection"
-        const val CHANNEL_ID_SERVICE = "rayban_service"
+        const val CHANNEL_ID_DETECTION = "glasses_detection"
+        const val CHANNEL_ID_SERVICE = "glasses_service"
         const val NOTIFICATION_ID_DETECTION = 1001
         const val NOTIFICATION_ID_SERVICE = 1002
     }

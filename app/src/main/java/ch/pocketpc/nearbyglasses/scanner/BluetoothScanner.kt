@@ -169,12 +169,12 @@ class BluetoothScanner(
         )
 
         // for to check if this is a smart glasses device (including our debug override)
-        val (isRayBanReal, reasonReal) = DetectionEvent.isMetaRayBan(companyId, deviceName)
+        val (isSmartGlassesReal, reasonReal) = DetectionEvent.isSmartGlasses(companyId, deviceName)
         //val overrideMatch = companyId != null && debugCompanyIds.contains(companyId)
         //only when debug is on AND company IDs are entered
         val overrideMatch = debugEnabled && companyId != null && debugCompanyIds.contains(companyId)
 
-        val isRayBan = isRayBanReal || overrideMatch
+        val isSmartGlasses = isSmartGlassesReal || overrideMatch
         val reason = when {
             overrideMatch -> "Debug override: Company ID 0x%04X matched".format(companyId)
             else -> reasonReal
@@ -185,11 +185,11 @@ class BluetoothScanner(
                 TAG,
                 "ADV addr=$deviceAddress name=${deviceName ?: "?"} rssi=${result.rssi} " +
                         "companyId=${companyId?.let { "0x%04X".format(it) } ?: "none"} " +
-                        "mfgLen=${manufacturerDataHex?.length?.div(2) ?: 0} rayban=$isRayBan reason=$reason"
+                        "mfgLen=${manufacturerDataHex?.length?.div(2) ?: 0} smartglasses=$isSmartGlasses reason=$reason"
             )
         }
 
-        if (isRayBan) {
+        if (isSmartGlasses) {
             val event = DetectionEvent(
                 timestamp = System.currentTimeMillis(),
                 deviceAddress = deviceAddress,

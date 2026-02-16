@@ -3,7 +3,7 @@
     <string name="app_name">Nearby Glasses</string>
     <string name="settings">Settings</string>
     <string name="notifyText">⚠️ Smart Glasses are probably nearby</string>
-    <string name="notLogging">Logging disabled. Log is local only anyhow.</string>
+    <string name="notLogging">Logging disabled. You will only see notifications if something has been spotted.</string>
     <string name="startScanning">Start Scanning</string>
     <string name="stopScanning">Stop Scanning</string>
     <string name="notScanning">Not scanning</string>
@@ -24,9 +24,9 @@
     <string name="titleForeground">Enable Foreground Service</string>
     <string name="summaryForeground">Run scanning as a foreground service to prevent being stopped by the system</string>
     <string name="titleCooldown">Notification Cooldown (ms)</string>
-    <string name="summaryCooldown">Current: %1$s ms. Minimum time between notifications in milliseconds (default: 10000ms = 10s)</string>
+    <string name="summaryCooldown">Currently: %1$s ms. Minimum time between notifications in milliseconds (default: 10000ms = 10s)</string>
     <string name="titleThreshold">RSSI Threshold (dBm)</string>
-    <string name="summaryThreshold">Current: %1$s dBm. Only detect devices with RSSI above this threshold (default: -75 dBm, ~3-10 m)</string>
+    <string name="summaryThreshold">Currently: %1$s dBm. Only detect devices with RSSI above this threshold (default: -75 dBm, ~3-10 m)</string>
     <string name="titleCategoryNotifications">Notification Settings</string>
     <string name="titleNotifications">Enable Notifications</string>
     <string name="summaryNotifications">Show notifications when smart glasses-devices are detected</string>
@@ -36,23 +36,24 @@
     <string name="titleDebug">Debug</string>
     <string name="summaryDebug">Enable all Company IDs found in log. Notify still only on smart glasses.</string>
     <string name="titleDebugSize">Max log lines</string>
-    <string name="summaryDebugSize">Current: %1$s. Maximum number of lines kept in debug log</string>
+    <string name="summaryDebugSize">Currently: %1$s. Maximum number of lines kept in debug log</string>
     <string name="titleDebugAdvonly">BLE ADV only</string>
     <string name="summaryDebugAdvonly">When enabled, only BLE advertisement (ADV) lines are shown in the debug log</string>
     <string name="nothing_to_export">No detections to export</string>
     <string name="titleDebugCompanyIds">Override Company IDs</string>
-    <string name="summaryDebugCompanyIds">Current: %1$s. If you enter one or multiple IDs to detect, in little endian, hex notation, they are used instead of the defaults ("0x01AB,0x058E,0x0D53"). This also triggers notifications for the new IDs.</string>
+    <string name="summaryDebugCompanyIds">Currently: %1$s. If you enter one or multiple IDs to detect, in little endian, hex notation, they are used instead of the defaults ("0x01AB,0x058E,0x0D53"). This also triggers notifications for the new IDs.</string>
     <string name="summaryApp">Detects smart glasses via Bluetooth LE</string>
     <string name="titleMethod">Detection Method</string>
     <string name="summaryMethod">Detection based on Company IDs in BTLE advertising frames and device name matching</string>
     <string name="titleLiability">Liability and License</string>
     <string name="summaryLiability" formatted="false"><![CDATA[
         The app <i>Nearby Glasses</i> has one sole purpose: look for smart glasses nearby and warn you.<br/>
-        The app’s author (<a href="https://yves.app">Yves Jeanrenaud</a>) takes no liability whatsoever for this app nor it’s functionality. Use at your own risk. By technical design, detecting Bluetooth LE devices might sometimes just not work as expected. I am no graduated developer. This is all written in my free time and with knowledge I tought myself.<br/>
-        <b>False positives are likely.</b> This means, the app <i>Nearby Glasses</i> may notify you of smart glasses nearby when there might be in fact a VR headset of the same manufacturer or another product of that company’s breed. It may also miss smart glasses nearby. Again: I am no pro developer.<br/>
-        However, this app is free and open source (foss), you may review the code, change it and re-use it (under the license): <a href="https://github.com/yjeanrenaud/yj_nearbyglasses">https://github.com/yjeanrenaud/yj_nearbyglasses</a>.
+        The app’s author (<a href="https://yves.app">Yves Jeanrenaud</a>) takes no liability whatsoever for this app nor it’s functionality. Use at your own risk. By technical design, detecting Bluetooth LE devices might sometimes just not work as expected. I am no graduated developer. This is all written in my free time and with knowledge I taught myself.<br/>
+        <b>False positives are likely.</b> This means, the app <i>Nearby Glasses</i> may notify you of smart glasses nearby when there might be in fact a VR headset of the same manufacturer or another product of that company’s breed. It may also miss smart glasses nearby. To see which brands are currently detected, please refer to the <a href="https://github.com/yjeanrenaud/yj_nearbyglasses/">code repository on GitHub</a>. Again: I am no pro developer.<br/>
+        However, this app is and will always be free and open source (foss), you may review the code, change it and re-use it (under the license): <a href="https://github.com/yjeanrenaud/yj_nearbyglasses">https://github.com/yjeanrenaud/yj_nearbyglasses</a>.
         <br/>
-        The app <i>Nearby Glasses</i> does not store any details about you or collects any information about you or your phone. There is no telemetry, no ads, and no other nuissance. If you install the app via Play Store, Google may know something about you and collect some stats. But the app itsself does not. <br/>
+        Made in the hope that it would be useful.<br/>
+        The app <i>Nearby Glasses</i> does not store any details about you or collects any information about you or your phone. There is no telemetry, no ads, and no other nuisance. If you install the app via Play Store, Google may know something about you and collect some stats. But the app itself does not. <br/>
         If you choose to store (export) the logfile, that is completely up to you and your liability where this data go to. The logs are recorded only locally and not automatically shared with anyone.<br/>
         <br/>
         <b>Use with extreme caution!</b> As stated before: There is no guarantee, detected smart glasses are really nearby. It might be another device looking technically (on the BTLE adv level) similar to smart glasses.<br/>
