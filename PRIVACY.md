@@ -1,5 +1,6 @@
 # Privacy Policy
 **As of:** February 2026
+
 This privacy policy provides information about the nature, scope and purpose of the processing of personal data within the Android app **NEarby Glasses**.
 ---
 
