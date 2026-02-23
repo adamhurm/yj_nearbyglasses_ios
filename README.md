@@ -5,6 +5,8 @@ attempting to detect smart glasses nearby and warn you.
 # Nearby Glasses 
 The app, called *Nearby Glasses*, has one sole purpose: Look for smart glasses nearby and warn you.
 
+<a href="https://play.google.com/store/apps/details?id=ch.pocketpc.nearbyglasses" target="_blank"><img width="239" height="71" alt="Get It On Google Play" src="https://github.com/user-attachments/assets/0feb46d1-969e-4f83-8fc7-c18d1bbed8ad" /></a>
+
 This app notifies you when smart glasses are nearby. It uses company identificators in the Bluetooth data sent out by these. Therefore, there likely are false positives (e.g. from VR headsets). Hence, please proceed with caution when approaching a person nearby wearing glasses. They might just be regular glasses, despite this app’s warning.
         
 The app’s author [Yves Jeanrenaud](https://yves.app) takes no liability whatsoever for this app nor it’s functionality. Use at your own risk. By technical design, detecting Bluetooth LE devices might sometimes just not work as expected. I am no graduated developer. This is all written in my free time and with knowledge I taught myself.<br/>
@@ -86,7 +88,8 @@ RSSI drops roughly according to<br/>
 - See [Releases](https://github.com/yjeanrenaud/yj_nearbyglasses/releases) for APK to download. Google Play Store entry may follow soon
 <img width="270" height="600" align ="right" alt="Screenshot Nearby Glasses: Settings" src="https://github.com/user-attachments/assets/337343d9-6868-485b-9a9a-1d9a99ca9cf0" />
 
-1. Install the app (for now, you have to enable the installation from untrusted sources, unfortunately) and open it
+<a href="https://play.google.com/store/apps/details?id=ch.pocketpc.nearbyglasses" target="_blank"><img width="239" height="71" alt="Get It On Google Play" src="https://github.com/user-attachments/assets/0feb46d1-969e-4f83-8fc7-c18d1bbed8ad" /></a>
+1. Install the app (from [Releases] or from [Google Play](https://play.google.com/store/apps/details?id=ch.pocketpc.nearbyglasses), for now) and open it
 2. Hit the *Start Scanning* button
 3. Grant permissions to activate Bluetooth (if not already enabled) and to access devices nearby. Some versions of Android also need you to grant permissions to access your location (before Version 13, mostly). *Nearby Glasses* does nothing with your location info. If you don't believe me, please look at the code
 4. You're all set! When smart glasses are detected nearby, a notification will appear. It does so until you hit *Stop Scanning* or terminate the app for good
@@ -111,7 +114,7 @@ RSSI drops roughly according to<br/>
 - I am no BT or Android expert at all. For what I've learned, one could also dig deeper into the communication of the smart glasses by sniffing the BLE traffic. By doing so, we would likely not need to rely on the device behaving according to the BT specifications but could also use heuristics on the encrypted traffic transmissions without much false positives. But I haven't looked into BT traffic packets for more than ten years. I'm glad I remembered ADV frames... So if anybody could help on this, that'd be greatly appreciated!
 - Move all hard-coded texts into `strings.xml` for easier localisation. Right now, the app is available in English only.
 - Add **more manufacturers IDs** of smart glasses. Right now, it's Meta, Oakley and Snap. A list of smart glasses with cameras available would help, too.
-- An **iOS app** would be easy to adapt, too. But I don't have the toolchain at hands right now.
+- An **iOS app** would be easy to adapt, too. I  have the toolchain now, but I will need a Mac to submit it to the Apple App Store in the end.
 
 ## Licencse and Credits
 **App Icon**: The icon is based on [Eyeglass icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/eyeglass)<br/>
