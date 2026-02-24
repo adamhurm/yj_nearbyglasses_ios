@@ -1,6 +1,11 @@
 # yj_nearbyglasses
 attempting to detect smart glasses nearby and warn you.
 <img width="270" height="600" align ="right" alt="Screenshot Nearby Glasses" src="https://github.com/user-attachments/assets/17565448-b285-4841-b07e-ba0dabe0b181" />
+# ⚠ WARNING! ⚠ 
+**HARASSING someone because you think they are wearing a covert surveillance device can be a criminal offence. It may even be a more serious offence than using such a device. Please seek legal advise regarding your local laws on this matter.**
+---
+# ⚠ DO NOT HARASS ANYONE AT ALL ⚠
+---
 
 # Nearby Glasses 
 The app, called *Nearby Glasses*, has one sole purpose: Look for smart glasses nearby and warn you.
@@ -82,6 +87,12 @@ RSSI drops roughly according to<br/>
 - You may also enter yourself some **company IDs** as string of hex values, e.g. `"0x01AB,0x058E,0x0D53`. This overrides the built-in detection, so your notification shows up for the new value(s).
 - For better persistence, it uses Android's *Foreground Service*. You may disable this under *Settings* if you don't need it.
 - The *Notification Cooldown* under *Settings* specifies how much time must pass between two warnings. Default is 10000 ms, which is 10 s.
+- It is now a bit more localised:
+   - English
+   - German
+   - Swiss German
+   - French
+   - more to come
 
 ## Usage
 
@@ -109,14 +120,16 @@ RSSI drops roughly according to<br/>
 8. You may also copy&paste the log by tapping on the log display frame
 
 ## Todos
-- **It's now working in the wild!** I managed to get some people testing it with verified  smart glasses around them. Special thanks to Lena!
+- **It's now working in the wild!** I managed to get some people testing it with verified smart glasses around them. Special thanks to Lena!
 - See [Releases](https://github.com/yjeanrenaud/yj_nearbyglasses/releases) for APK to download. 
 - I pushed [*Nearby Glasses* to Google Play](https://play.google.com/store/apps/details?id=ch.pocketpc.nearbyglasses), too. However, I will always publish [releases here on GitHub](https://github.com/yjeanrenaud/yj_nearbyglasses/releases) and [elsewhere](https://yves.app/nearbyglasses/latest.apk), for those that avoid the Google Play.
 - I am no BT or Android expert at all. For what I've learned, one could also dig deeper into the communication of the smart glasses by sniffing the BLE traffic. By doing so, we would likely not need to rely on the device behaving according to the BT specifications but could also use heuristics on the encrypted traffic transmissions without much false positives. But I haven't looked into BT traffic packets for more than ten years. I'm glad I remembered ADV frames... So if anybody could help on this, that'd be greatly appreciated!
-- Move all hard-coded texts into `strings.xml` for easier localisation. Right now, the app is available in English only.
+- **Rework to canary mode**. I am looking into the suggestion I got on mastodon to steer away from *warning* for smart glasses and rather let the app tell *there are no smart glasses found so far*. This means, I must rwork the scanner logic a bit and the interface
+- Add an option to set false positives to an ignore list. Maybe in the notification?
+---
 - Add **more manufacturers IDs** of smart glasses. Right now, it's Meta, Oakley and Snap. A list of smart glasses with cameras available would help, too.
-- An **iOS app** would be easy to adapt, too. I  have the toolchain now, but I will need a Mac to submit it to the Apple App Store in the end.
-- There currently seems to be a **layout issue** with **Google Pixel devices**. You can't reach the menu as it's mixed with the status bar somehow. Will look into that asap. Meanwhile, try to put your screen to landscape mode and rotate *clockwise (to the right)*. 
+- An **iOS app** might be possible, too. I have the toolchain now, but I will need a Mac to submit it to the Apple App Store in the end. And I need to dig deeper into iOS development-
+- There **layout issue** with **Google Pixel devices** seems to be fixed as of Version 1.0.3. If you still can't reach the menu as it's mixed with the status bar somehow. Will look into that asap. Meanwhile, try to put your screen to landscape mode and rotate *clockwise (to the right)*. 
 
 ## Licencse and Credits
 **App Icon**: The icon is based on [Eyeglass icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/eyeglass)<br/>
