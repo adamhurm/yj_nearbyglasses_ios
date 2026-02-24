@@ -20,6 +20,8 @@
     <string name="debug_log">Debug Protokoll</string>
     <string name="glasses_detected">👓 Warnung: Smart Glasses sind vermutlich in der Nähe</string>
     <string name="info_text">Diese App benachrichtigt, wenn sich Smart Glasses in der Nähe befinden. Sie nutzt dazu die Unternehmenskennungen in den von diesen Brillen gesendeten Bluetooth-Daten. Daher kann es zu Fehlalarmen kommen (z. B. durch VR-Headsets). Seien Sie daher bitte vorsichtig, wenn Sie sich einer Person nähern, die eine Brille trägt. Es könnte sich trotz der Warnung dieser App um eine normale Brille handeln.</string>
+    <string name="warning_title">⚠️ WARNUNG! ⚠️ </string>
+    <string name="warning_text">JEMANDEN ZU BEDRÄNGEN, weil man glaubt, sie würden ein verdecktes Überwachungsgerät tragen, kann eine Strafttat darstellen. Es kann sogar eine schwerer sein, als solch ein Gerät zu benutzen. Bitte lassen Sie sich bezüglich der örtlichen Gesetze zu diesem Thema rechtlich beraten.\n⚠️ BELÄSTIGEN SIE NIEMANDEN - NIE ⚠️ </string>
     <string name="titleCategoryScanningSettings">Scan-Einstellungen</string>
     <string name="titleForeground">Aktiviere Vordergrunddienst</string>
     <string name="summaryForeground">Führt das Scannen als Vordergrunddienst aus, um zu verhindern, dass es vom System angehalten wird.</string>
@@ -40,7 +42,7 @@
     <string name="titleDebugAdvonly">Nur BLE ADV</string>
     <string name="summaryDebugAdvonly">Wenn diese Option aktiviert ist, werden im Protokoll nur BLE-Advertisement-Zeilen (ADV) angezeigt.</string>
     <string name="nothing_to_export">Keine Funde zum Exportieren</string>
-    <string name="titleDebugCompanyIds">Derzeit: %1$s. Wird eine oder mehrere zu IDs in Little-Endian-Hexadezimalschreibweise angegeben, wird/werden diese anstelle der Standardwerte (0x01AB,0x058E,0x0D53) verwendet. Dadurch werden auch Benachrichtigungen für diese neuen IDs ausgelöst.</string>
+    <string name="titleDebugCompanyIds">Derzeit: %1$s. Wird eine oder mehrere IDs in Little-Endian-Hexadezimalschreibweise angegeben, wird/werden diese anstelle der Standardwerte (0x01AB,0x058E,0x0D53) verwendet. Dadurch werden auch Benachrichtigungen für diese neuen IDs ausgelöst.</string>
     <string name="none_in_parentheses">(keine)</string>
     <string name="summaryApp">Entdeckt Smart Glasses mittels Bluetooth LE</string>
     <string name="titleMethod">Entdeckungsverfahren</string>
@@ -48,7 +50,7 @@
     <string name="titleLiability">Haftung und Lizenz</string>
     <string name="summaryLiability"><![CDATA[
 	Die App <i>Nearby Glasses</i> hat nur einen einzigen Zweck: Die App sucht nach Smart Glasses in der Nähe und warnt. <br/>
-	Der Autor der App (<a href="https://yves.app">Yves Jeanrenaud</a>) übernimmt keinerlei Haftung für diese App oder ihre Funktionalität. Die Nutzung erfolgt auf eigene Gefahr. Aufgrund der technischen Konzeption funktioniert die Erkennung von Bluetooth-LE-Geräten manchmal nicht wie erwartet. Ich bin kein ausgebildeter Entwickler. All dies habe ich in meiner Freizeit und mit selbst erworbenem Wissen geschrieben. <b>Falsch-positive Ergebnisse sind wahrscheinlich.</b> Das bedeutet, dass die App <i>Nearby Glasses</i> möglicherweise über Smart Glasses in der Nähe benachrichtigt, obwohl es sich in Wirklichkeit um ein VR-Headset desselben Herstellers oder ein anderes Produkt dieses Unternehmens handelt. Es kann auch vorkommen, dass Smart Glasses in der Nähe nicht erkannt werden. Um zu sehen, welche Marken derzeit erkannt werden, sehen Sie bitte im <a href="https://github.com/yjeanrenaud/yj_nearbyglasses/">Code-Repository auf GitHub</a> nach. Nochmals: Ich bin kein professioneller Entwickler. Diese App ist und bleibt jedoch kostenlos und Open Source (FOSS). Sie können den Code überprüfen, ändern und wiederverwenden (unter der Lizenz): <a href="https://github.com/yjeanrenaud/yj_nearbyglasses">https://github.com/yjeanrenaud/yj_nearbyglasses</a>.<br/>
+	Der Autor der App (<a href="https://yves.app">Yves Jeanrenaud</a>) übernimmt keinerlei Haftung für diese App oder ihre Funktionalität. Die Nutzung erfolgt auf eigene Gefahr. Aufgrund der technischen Konzeption funktioniert die Erkennung von Bluetooth-LE-Geräten manchmal nicht wie erwartet. Ich bin kein ausgebildeter Software-Entwickler. All dies habe ich in meiner Freizeit und mit selbst erworbenem Wissen geschrieben. <b>Falsch-positive Ergebnisse sind wahrscheinlich.</b> Das bedeutet, dass die App <i>Nearby Glasses</i> möglicherweise über Smart Glasses in der Nähe benachrichtigt, obwohl es sich in Wirklichkeit um ein VR-Headset desselben Herstellers oder ein anderes Produkt dieses Unternehmens handelt. Es kann auch vorkommen, dass Smart Glasses in der Nähe nicht erkannt werden. Um zu sehen, welche Marken derzeit erkannt werden, sehen Sie bitte im <a href="https://github.com/yjeanrenaud/yj_nearbyglasses/">Code-Repository auf GitHub</a> nach. Nochmals: Ich bin kein professioneller Software-Entwickler. Diese App ist und bleibt jedoch kostenlos und Open Source (FOSS). Sie können den Code überprüfen, ändern und wiederverwenden (unter der Lizenz): <a href="https://github.com/yjeanrenaud/yj_nearbyglasses">https://github.com/yjeanrenaud/yj_nearbyglasses</a>.<br/>
 	Erstellt in der Hoffnung, dass es nützlich sein möge.<br/>
 	Die App <i>Nearby Glasses</i> speichert keine Details über sie und sammelt keine Informationen über sie oder Ihr Telefon. Es gibt keine Telemetrie, keine Werbung und keine anderen Belästigungen. Wenn sie die App über den Play Store installieren, kann Google möglicherweise etwas über sie erfahren und einige Statistiken sammeln. Die App selbst tut dies jedoch nicht. <br/>
 	Wenn sie sich dafür entscheiden, die Logdatei zu speichern (zu exportieren), liegt es ganz bei ihnen und in ihrer Verantwortung, wohin diese Daten gelangen. Die Protokolle werden nur lokal aufgezeichnet und nicht automatisch mit anderen geteilt.<br/>
@@ -61,9 +63,24 @@
 	Diese App <i>Nearby Glasses</i> unterliegt der PolyForm Noncommercial License 1.0.0. Siehe <a href="https://polyformproject.org/licenses/noncommercial/1.0.0">https://polyformproject.org/licenses/noncommercial/1.0.0</a>.<br/>
 	✊🏼 resist (Ai)
 	<br/> ]]></string>
-    <string name="pref_language_title">Sprache der App auswählen</string>
-	<!-- for notifications -->
-    <string name="notifyText">⚠️ Smart Glasses befinden sich wahrscheinlich in der Nähe</string>
+    <string name="pref_language_title">Sprache</string>
+    <string name="pref_language_summary">Sprache der App auswählen</string>
+    <string-array name="pref_language_entries">
+        <item>Systemsprache</item>
+        <item>Englisch</item>
+        <item>Deutsch</item>
+        <item>Schweizerdeutsch</item>
+        <item>Französisch</item>
+    </string-array>
+    <string-array name="pref_language_values">
+        <item></item> <!-- empty string means “follow system” -->
+        <item>en</item> <!-- only BCP-47 tags;  -->
+        <item>de</item>
+        <item>de-CH</item>
+        <item>fr</item>
+    </string-array>
+    <!-- for notifications -->
+    <string name="notifyText">⚠️ Smart Glasses befinden sich vielleicht in der Nähe</string>
 	<!-- Notification channel names -->
     <string name="channel_detection_name">Warnmeldungen zur Erkennung von Smart Glasses</string>
     <string name="channel_detection_description">Benachrichtigt, wenn Smart Glasses erkannt werden</string>
@@ -135,7 +152,7 @@ Firma: %4$s]]></string>
     <string name="dbg_scan_failed">Scan fehlgeschlagen mit Fehlercode: %1$d</string>
     <string name="dbg_bluetooth_disabled">Bluetooth nicht eingeschaltet</string>
     <string name="dbg_already_scanning">Scanne bereits</string>
-    <string name="dbg_ble_not_available">BLE-Scanner nicht verfügar</string>
+    <string name="dbg_ble_not_available">BLE-Scanner nicht verfügbar</string>
     <string name="dbg_ble_started_verbose">BLE-Scan gestartet. RSSI-Schwellenwert = %1$d, Modus = LOW_LATENCY</string>
     <string name="dbg_ble_started_simple">BLE-Scan gestartet mit RSSI-Schwellenwert: %1$d dBm</string>
     <string name="dbg_ble_stopped">BLE-Scan gestoppt</string>

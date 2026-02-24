@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- for menu, settings, buttons -->
-	<string name="app_name" translatable="false">Lunettes à proximité</string>
+	<string name="app_name" translatable="false">Nearby Glasses</string>
 	<string name="settings">Paramètres</string>
 	<string name="notLogging">Journalisation désactivée. Vous ne verrez les notifications que si quelque chose a été détecté. </string>
 	<string name="startScanning">Démarrer la recherche</string>
@@ -20,6 +20,8 @@
 	<string name="debug_log">Journal de débogage</string>
 	<string name="glasses_detected">👓 Avertissement: des lunettes intelligentes se trouvent probablement à proximité</string>
 	<string name="info_text">Cette application vous avertit lorsque des lunettes intelligentes se trouvent à proximité. Elle utilise les identifiants d\'entreprise contenus dans les données Bluetooth envoyées par ces dernières. Il est donc possible qu\'il y ait des faux positifs (par exemple, provenant de casques VR). Par conséquent, veuillez faire preuve de prudence lorsque vous approchez une personne à proximité qui porte des lunettes. Il peut s\'agir de lunettes ordinaires, malgré l\'avertissement de cette application.</string>
+	<string name="warning_title">⚠️ AVERTISSEMENT! ⚠️ </string>
+	<string name="warning_text">HARCÉLER quelqu\'un parce que vous pensez qu\'il porte un dispositif de surveillance dissimulé peut constituer une infraction pénale. Cela peut même être une infraction plus grave que l\'utilisation d\'un tel dispositif. Veuillez consulter un conseiller juridique au sujet des lois locales en vigueur dans ce domaine.\n⚠️ NE HARCÉLEZ PERSONNE, JAMAIS! ⚠️ </string>
 	<string name="titleCategoryScanningSettings">Paramètres de scan</string>
 	<string name="titleForeground">Activer le service en avant-plan</string>
 	<string name="summaryForeground">Exécutez l\'analyse en tant que service en avant-plan pour éviter qu\'elle ne soit interrompue par le système.</string>
@@ -70,10 +72,18 @@
 	<item>Par défaut du système</item>
 	<item>Anglais</item>
 	<item>Allemand</item>
+	<item>Suisse Allemand</item>
 	<item>Français</item>
 	</string-array>
+	<string-array name="pref_language_values">
+		<item></item> <!-- empty string means “follow system” -->
+		<item>en</item> <!-- only BCP-47 tags;  -->
+		<item>de</item>
+		<item>de-CH</item>
+		<item>fr</item>
+	</string-array>
 	<!-- for notifications -->
-	<string name="notifyText">⚠️ Des lunettes intelligentes sont probablement à proximité</string>
+	<string name="notifyText">⚠️ Des lunettes intelligentes sont peut-être à proximité</string>
 	<!-- Notification channel names -->
 	<string name="channel_detection_name">Alertes de détection de lunettes intelligentes</string>
 	<string name="channel_detection_description">Alerte lorsque des lunettes intelligentes sont détectées</string>
