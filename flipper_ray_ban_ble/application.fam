@@ -1,0 +1,12 @@
+App(
+    appid="ray_ban_ble_emulator",
+    name="Ray-Ban BLE Test",
+    apptype=FlipperAppType.EXTERNAL,
+    entry_point="ray_ban_ble_app",
+    requires=["gui", "bt"],
+    stack_size=2 * 1024,
+    fap_category="Bluetooth",
+    fap_description="Emulates smart glasses BLE advertisements for testing NearbyGlasses detection",
+    fap_author="NearbyGlasses",
+    fap_version="1.0",
+)
