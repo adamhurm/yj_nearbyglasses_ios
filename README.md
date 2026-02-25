@@ -1,3 +1,8 @@
+# forked version for iOS proof of concept
+I forked this repo to test out iOS proof of concept using a Flipper Zero for BLE device emulation. See short video below:
+
+[![Video: Nearby Glasses iOS proof of concept using flipper zero](https://img.youtube.com/vi/JcUVIIDSbHo/0.jpg)](https://youtu.be/JcUVIIDSbHo)
+
 # yj_nearbyglasses
 attempting to detect smart glasses nearby and warn you.
 <img width="270" height="600" align ="right" alt="Screenshot Nearby Glasses" src="https://github.com/user-attachments/assets/17565448-b285-4841-b07e-ba0dabe0b181" />
