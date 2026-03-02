@@ -38,14 +38,18 @@ final class BLEScanner: NSObject {
 
     private var centralManager: CBCentralManager!
     private let settings: SettingsManager
-    private let queue = DispatchQueue(label: "com.nearbyglasses.ble", qos: .background)
+    private let notificationService: NotificationService
+    // .utility QoS: background QoS can be throttled too aggressively when the
+    // app is suspended, causing BLE callbacks to be delayed.
+    private let queue = DispatchQueue(label: "com.nearbyglasses.ble", qos: .utility)
 
     private(set) var isScanning = false
 
     // MARK: - Init
 
-    init(settings: SettingsManager) {
+    init(settings: SettingsManager, notificationService: NotificationService) {
         self.settings = settings
+        self.notificationService = notificationService
         super.init()
         // State restoration identifier enables iOS to relaunch the app after suspension.
         centralManager = CBCentralManager(
@@ -182,6 +186,17 @@ extension BLEScanner: CBCentralManagerDelegate {
             manufacturerDataHex: manufacturerDataHex,
             detectionReason: reason
         )
+
+        // Schedule the notification synchronously on the BLE queue before
+        // returning from the callback. iOS gives the app finite time to process
+        // each BLE advertisement; any work dispatched to another queue
+        // (e.g. @MainActor) may not run before the app is suspended again.
+        if settings.notificationsEnabled {
+            notificationService.scheduleDetectionNotification(
+                for: event,
+                cooldownSeconds: settings.cooldownSeconds
+            )
+        }
 
         delegate?.bleScannerDidDetect(event)
     }

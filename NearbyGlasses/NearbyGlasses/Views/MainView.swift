@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @StateObject private var viewModel = ScannerViewModel()
+    @EnvironmentObject private var viewModel: ScannerViewModel
     @State private var showSettings = false
     @State private var showClearConfirmation = false
 
@@ -164,4 +164,5 @@ struct MainView: View {
 
 #Preview {
     MainView()
+        .environmentObject(ScannerViewModel())
 }

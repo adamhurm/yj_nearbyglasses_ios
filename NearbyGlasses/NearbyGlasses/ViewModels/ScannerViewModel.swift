@@ -23,9 +23,10 @@ final class ScannerViewModel: ObservableObject {
 
     init() {
         let settings = SettingsManager()
+        let notificationService = NotificationService()
         self.settings = settings
-        self.notificationService = NotificationService()
-        self.bleScanner = BLEScanner(settings: settings)
+        self.notificationService = notificationService
+        self.bleScanner = BLEScanner(settings: settings, notificationService: notificationService)
         // Wire up delegate after both are created
         bleScanner.delegate = self
     }
@@ -76,14 +77,10 @@ final class ScannerViewModel: ObservableObject {
 extension ScannerViewModel: BLEScannerDelegate {
 
     nonisolated func bleScannerDidDetect(_ event: DetectionEvent) {
+        // Notification is scheduled directly in BLEScanner on the BLE queue.
+        // Only update UI state here.
         Task { @MainActor in
             self.appendLog(event.formattedLog)
-            if self.settings.notificationsEnabled {
-                self.notificationService.scheduleDetectionNotification(
-                    for: event,
-                    cooldownSeconds: self.settings.cooldownSeconds
-                )
-            }
         }
     }
 
