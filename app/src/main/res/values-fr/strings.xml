@@ -61,10 +61,35 @@
 	<b>À utiliser avec une extrême prudence !</b> Comme indiqué précédemment: rien ne garantit que les lunettes intelligentes détectées se trouvent réellement à proximité. Il peut s'agir d\'un autre appareil qui, d\'un point de vue technique (au niveau BLE adv), ressemble à des lunettes intelligentes.<br/>
 	Veuillez ne pas agir de manière irréfléchie. <b>Réfléchissez avant d\'agir sur la base de messages</b> (pas seulement ceux provenant de cette application).<br/>
 	<br/>
+	<b>⚠️ AVERTISSEMENT! ⚠️</b><br/>
+    <b>HARCÉLER</b> quelqu\'un parce que vous <i>pensez</i> qu\'il porte un dispositif de surveillance dissimulé peut constituer une infraction pénale. Cela peut même être une infraction plus grave que l\'utilisation d\'un tel dispositif. Veuillez consulter un conseiller juridique au sujet des lois locales en vigueur dans ce domaine.<br/>
+    ⚠️ <b>NE HARCÉLEZ PERSONNE, JAMAIS!</b> ⚠️<br/>
+    <br/>
 	<b>Icône de l\'application</b>: l\'icône est basée sur <a href="https://www.flaticon.com/free-icons/eyeglass" title="icônes de lunettes">les icônes de lunettes créées par Freepik - Flaticon</a>.<br/><br/>
-	Cette application <i>Nearby Glasses</i> est sous licence PolyForm Noncommercial License 1.0.0. Voir <a href="https://polyformproject.org/licenses/noncommercial/1.0.0">https://polyformproject.org/licenses/noncommercial/1.0.0</a>.<br/>
-	✊🏼 résister (Ai)<br/>
-	]]> "</string>
+	<br/>
+	<b>Licences</b>:<br/>
+	Cette application <i>Nearby Glasses</i> est sous licence GNU Affero General Public License 3.0. Voir <a href="https://www.gnu.org/licenses/agpl-3.0.html">https://www.gnu.org/licenses/agpl-3.0.html</a>.<br/>
+    <br/>
+    Ce projet inclut des bibliothèques tierces:<br/>
+	<br/>
+	1. kotlinx.coroutines<br/>
+   	Copyright 2016-2024 JetBrains<br/>
+   	Sous licence Apache, version 2.0<br/>
+	<a href="https://github.com/Kotlin/kotlinx.coroutines">https://github.com/Kotlin/kotlinx.coroutines</a><br/>
+	<br/>
+	2. Bibliothèques AndroidX<br/>
+	Copyright The Android Open Source Project<br/>
+	Sous licence Apache, version 2.0<br/>
+	<a href="https://github.com/androidx/androidx">https://github.com/androidx/androidx</a><br/>
+	<br/>
+	Une copie de la licence Apache 2.0 est disponible à l'adresse <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br/>
+	<br/>
+	3. Le CLA est sous licence Creative Commons Attribution 3.0 Unported License.<br/>
+	par Harmony Agreements <a href="https://www.harmonyagreements.org/agreements">http://www.apache.org/licenses/LICENSE-2.0</a><br/>
+	<br/>
+	Une copie de la licence Creative Commons Attribution 3.0 Unported License est disponible à l'adresse <a href="https://creativecommons.org/licenses/by/3.0/">https://creativecommons.org/licenses/by/3.0/</a><br/>
+    <br/>
+	✊🏼 résister (iA)<br/><br/><br/>	]]> "</string>
 	<string name="pref_language_title">Langue</string>
 	<string name="pref_language_summary">Choisissez la langue de l\'application</string>
 
@@ -140,6 +165,7 @@ Entreprise: %4$s]]></string>
 	<!-- Log formatting -->
 	<string name="log_unknown_device">Inconnu</string>
 	<string name="log_detection_line">[%1$s] %2$s (%3$d dBm) - %4$s</string>
+	<string name="log_startvalue">[14:30:45] Ray-Ban Meta (-65 dBm) - Meta ID de entreprise\n[14:31:20] Appareil inconnu (-72 dBm) - Nom de l\' appareil contenu \'rayban\'</string>
 	<string name="log_debug_prefix">DEBUG</string>
 	<string name="log_debug_line">[%1$s] %2$s: %3$s</string>
 	<!-- Service logs -->
@@ -149,7 +175,7 @@ Entreprise: %4$s]]></string>
 	<string name="log_scanning_failed">Échec du démarrage du scan</string>
 	<string name="log_notification_suppressed">Détection pendant la période de refroidissement, notification supprimée</string>
 	<string name="log_service_destroyed">Service détruit</string>
-	<string name="reason_debug_override_company_id">Remplacement de débogage: ID de société %1$s correspondant trouvé</string>
+	<string name="reason_debug_override_company_id">Remplacement de débogage: ID de entreprise %1$s correspondant trouvé</string>
 	<string name="company_unknown_plain">Inconnu</string>
 	<string name="placeholder_none">aucun</string>
 	<!-- Debug / scanner logs -->

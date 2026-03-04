@@ -42,7 +42,8 @@
     <string name="titleDebugAdvonly">Nur BLE ADV</string>
     <string name="summaryDebugAdvonly">Wenn die Option aktiviert isch, werde im Protokoll numme BLE-Advertisement-Ziile (ADV) azeigt.</string>
     <string name="nothing_to_export">Kei Fund zum Exportiere</string>
-    <string name="titleDebugCompanyIds"> Derzyt: %1$s. Wird eini oder mehrerei IDs im Little-Endian-Hexadezimalschriibwiis  ageh, wird/werde die anstatt vo de Standardwärt (0x01AB,0x058E,0x0D53) gnoh. Dodurch werde au Binochrichtigunge für disi neui IDs usglöst.</string>
+    <string name="titleDebugCompanyIds">Überschryb Firme-IDs</string>
+    <string name="summaryDebugCompanyIds"> Derzyt: %1$s. Wird eini oder mehrerei IDs im Little-Endian-Hexadezimalschriibwiis  ageh, wird/werde die anstatt vo de Standardwärt (0x01AB,0x058E,0x0D53) gnoh. Dodurch werde au Binochrichtigunge für disi neui IDs usglöst.</string>
     <string name="none_in_parentheses">(keini)</string>
     <string name="summaryApp">Entdeckt Smart Glasses mittels Bluetooth LE</string>
     <string name="titleMethod">Entdeckungsvrfahre</string>
@@ -57,12 +58,36 @@
 	<br/>
 	<b>Verwende Si die App mit üsseschter Vorsicht!</b> Wie bereits erwähnt: Es gibt kei Garantie drfür, dass d erkennte Smart Glasses wirklich in dr Neechi sin. Es cha sich um es anders Grät handle, wo technisch (uf BLE-Adv-Ebene) enere Smartbrille ähnlig isch. <br/>
 	Bitte handle Si nid voreilig. <b>Überlege Si, bevor Si auf Nochrichte reagiere</b> (nid nur vo dere App).<br/>
-	<br/>
+    <br/>
+    <b>⚠️ WARNIG! ⚠️</b><br/>
+    <b>ÖBBERT Z BELÄSCHTIGE</b>, will me <i>glaubt</i>, si würde es vrdeckts Überwachigsgrät benutze, cha e Stroftat darstelle. Es cha sogar e schwereri Stroftat si, als sones Grät z benutze. Bitte lossed Si sich zu de örtliche Gsetz zu diem Thema rechtlich berote.<br/>
+    ⚠️ <b>BELÄSCHTIGE SIE NIEMERTS - NIE</b> ⚠️<br/>
+    <br/>
 	<b>App-Symbol</b>: S Symbol basiert auf <a href="https://www.flaticon.com/free-icons/eyeglass" title="Brillensymbole">Brillensymbolen, die von Freepik – Flaticon erstellt wurden</a>.<br/>
 	<br/>
-	D App <i>Nearby Glasses</i> unterligt dr PolyForm Noncommercial License 1.0.0. Luege Si uf <a href="https://polyformproject.org/licenses/noncommercial/1.0.0">https://polyformproject.org/licenses/noncommercial/1.0.0</a>.<br/>
-	✊🏼 resist (Ai)
-	<br/> ]]></string>
+	<b>Lizenze</b>:<br/>
+	D App <i>Nearby Glasses</i> unterligt dr GNU Affero General Public License 3.0. Lueged Si uf <a href="https://www.gnu.org/licenses/agpl-3.0.html">https://www.gnu.org/licenses/agpl-3.0.html</a>.<br/>
+	<br/>
+	Das Projekt enthaltet Bibliotheke von Drittanbieterinne:<br/>
+    <br/>
+    1. kotlinx.coroutines<br/>
+    Copyright 2016-2024 JetBrains<br/>
+    Lizenziert unter dr Apache-Lizenz, Version 2.0<br/>
+    <a href="https://github.com/Kotlin/kotlinx.coroutines">https://github.com/Kotlin/kotlinx.coroutines</a><br/>
+    <br/>
+    2. AndroidX-Bibliotheke<br/>
+    Copyright The Android Open Source Project<br/>
+    Lizenziert unter dr Apache-Lizenz, Version 2.0<br/>
+    <a href="https://github.com/androidx/androidx">https://github.com/androidx/androidx</a><br/>
+    <br/>
+    E Kopie vo dr Apache-Lizenz 2.0 isch verfiegbar unter <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br/>
+    <br/>
+    3. D CLA unterliegt dr Creative Commons Attribution 3.0 Unported License.<br/>
+    von Harmony Agreements <a href="https://www.harmonyagreements.org/agreements">http://www.apache.org/licenses/LICENSE-2.0</a><br/>
+    <br/>
+    E Kopie vo dr Creative Commons Attribution 3.0 Unported License isch verfiegbar unter <a href="https://creativecommons.org/licenses/by/3.0/">https://creativecommons.org/licenses/by/3.0/</a><br/>
+    <br/>
+    ✊🏼 resist (Ai)<br/><br/><br/>]]></string>
     <string name="pref_language_title">Sproch</string>
     <string name="pref_language_summary">D Sproch vo dr  App uswähle</string>
     <string-array name="pref_language_entries">
@@ -135,6 +160,7 @@ Firma: %4$s]]></string>
 	<!-- Log formatting -->
     <string name="log_unknown_device">Unbekannt</string>
     <string name="log_detection_line">[%1$s] %2$s (%3$d dBm) - %4$s</string>
+    <string name="log_startvalue">[14:30:45] Ray-Ban Meta (-65 dBm) - Meta Firme-ID\n[14:31:20] Unbekannts Grät (-72 dBm) - Grätename enthaltet \'rayban\'</string>
     <string name="log_debug_prefix">DEBUG</string>
     <string name="log_debug_line">[%1$s] %2$s: %3$s</string>
 	<!-- Service logs -->
