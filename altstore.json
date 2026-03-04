@@ -10,7 +10,7 @@
       "name": "Nearby Glasses",
       "bundleIdentifier": "com.nearbyglasses.app",
       "developerName": "NearbyGlasses Contributors",
-      "description": "Scans Bluetooth Low Energy advertisements to detect smart glasses devices nearby. No account required.",
+      "localizedDescription": "Scans Bluetooth Low Energy advertisements to detect smart glasses devices nearby. No account required.",
       "iconURL": "https://raw.githubusercontent.com/adamhurm/yj_nearbyglasses_ios/main/img/icon.png",
       "downloadURL": "https://github.com/adamhurm/yj_nearbyglasses_ios/releases/download/v1.0.0/NearbyGlasses-v1.0.0.ipa",
       "version": "1.0.0",
