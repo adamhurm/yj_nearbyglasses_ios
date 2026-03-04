@@ -102,3 +102,20 @@ Thumbs.db
 
 #CLA
 .cla-signatures/
+
+# Xcode
+xcuserdata/
+**/*.xcuserdatad/
+DerivedData/
+build/
+*.ipa
+*.dSYM/
+
+# macOS
+.DS_Store
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
