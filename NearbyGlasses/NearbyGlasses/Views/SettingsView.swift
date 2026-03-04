@@ -145,38 +145,44 @@ struct SettingsView: View {
                     .foregroundColor(.secondary)
                     .font(.caption)
             }
-
-            VStack(alignment: .leading, spacing: 6) {
-                Text("Detection Method")
-                    .font(.subheadline)
-                    .bold()
-                Text(
-                    "Scans Bluetooth Low Energy (BLE) advertisements and matches Manufacturer Specific Data " +
-                    "Company IDs for known smart glasses manufacturers:\n" +
-                    "• Meta Platforms, Inc. (0x01AB) — Ray-Ban Meta\n" +
-                    "• Meta Platforms Technologies (0x058E)\n" +
-                    "• EssilorLuxottica (0x0D53)\n" +
-                    "• Snapchat, Inc. (0x03C2) — Snap Spectacles"
-                )
-                .font(.caption)
-                .foregroundColor(.secondary)
-            }
-            .padding(.vertical, 4)
-
-            VStack(alignment: .leading, spacing: 6) {
-                Text("Disclaimer")
-                    .font(.subheadline)
-                    .bold()
-                Text(
-                    "This app provides probabilistic detection only. False positives are possible — " +
-                    "many devices share Bluetooth Company IDs. No action should be taken based solely " +
-                    "on this app's output. The developer is not liable for any misuse."
-                )
-                .font(.caption)
-                .foregroundColor(.secondary)
-            }
-            .padding(.vertical, 4)
+            detectionMethodRow
+            disclaimerRow
         }
+    }
+
+    private var detectionMethodRow: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text("Detection Method")
+                .font(.subheadline)
+                .bold()
+            Text(
+                "Scans Bluetooth Low Energy (BLE) advertisements and matches Manufacturer Specific Data " +
+                "Company IDs for known smart glasses manufacturers:\n" +
+                "• Meta Platforms, Inc. (0x01AB) — Ray-Ban Meta\n" +
+                "• Meta Platforms Technologies (0x058E)\n" +
+                "• EssilorLuxottica (0x0D53)\n" +
+                "• Snapchat, Inc. (0x03C2) — Snap Spectacles"
+            )
+            .font(.caption)
+            .foregroundColor(.secondary)
+        }
+        .padding(.vertical, 4)
+    }
+
+    private var disclaimerRow: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text("Disclaimer")
+                .font(.subheadline)
+                .bold()
+            Text(
+                "This app provides probabilistic detection only. False positives are possible — " +
+                "many devices share Bluetooth Company IDs. No action should be taken based solely " +
+                "on this app's output. The developer is not liable for any misuse."
+            )
+            .font(.caption)
+            .foregroundColor(.secondary)
+        }
+        .padding(.vertical, 4)
     }
 
     // MARK: - Helpers
