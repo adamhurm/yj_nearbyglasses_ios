@@ -1,0 +1,7 @@
+{
+  "name": "Nearby Glasses",
+  "subtitle": "Detect smart glasses nearby via BLE",
+  "description": "Scans Bluetooth Low Energy advertisements to detect smart glasses devices.",
+  "apps": [],
+  "news": []
+}
