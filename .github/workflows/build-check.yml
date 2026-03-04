@@ -1,0 +1,42 @@
+name: Build Check
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Verify unsigned build
+    runs-on: macos-15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select Xcode 16
+        run: sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer
+
+      - name: Build archive (unsigned)
+        shell: bash
+        run: |
+          set -o pipefail
+          xcodebuild archive \
+            -project NearbyGlasses/NearbyGlasses.xcodeproj \
+            -scheme NearbyGlasses \
+            -configuration Release \
+            -destination "generic/platform=iOS" \
+            -archivePath build/NearbyGlasses.xcarchive \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            DEVELOPMENT_TEAM="" \
+            | xcpretty
+
+      - name: Verify .app bundle in archive
+        run: |
+          APP="build/NearbyGlasses.xcarchive/Products/Applications/NearbyGlasses.app"
+          [ -d "$APP" ] && echo "Build OK: $APP" || (echo "ERROR: .app not found" && exit 1)
