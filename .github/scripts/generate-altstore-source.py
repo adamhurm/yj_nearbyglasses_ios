@@ -48,7 +48,7 @@ source = {
         "name": "Nearby Glasses",
         "bundleIdentifier": "com.nearbyglasses.app",
         "developerName": "NearbyGlasses Contributors",
-        "description": "Scans Bluetooth Low Energy advertisements to detect smart glasses devices nearby. No account required.",
+        "localizedDescription": "Scans Bluetooth Low Energy advertisements to detect smart glasses devices nearby. No account required.",
         "iconURL": f"https://raw.githubusercontent.com/{repo}/main/img/icon.png",
         "downloadURL": latest["downloadURL"],
         "version": latest["version"],
