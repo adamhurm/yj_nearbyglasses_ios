@@ -1,7 +1,31 @@
-# forked version for iOS proof of concept
-I forked this repo to test out iOS proof of concept using a Flipper Zero for BLE device emulation. See short video below:
+
+---
+
+⚠️ README FOR iOS FORK. SCROLL DOWN TO SEE THE ORIGINAL
+
+I forked this repo to test out iOS proof of concept using a Flipper Zero for BLE device emulation.
+
+
+Here's a 20 second demo of what it looks like:
 
 [![Video: Nearby Glasses iOS proof of concept using flipper zero](https://img.youtube.com/vi/JcUVIIDSbHo/0.jpg)](https://youtu.be/JcUVIIDSbHo)
+
+### Installation
+
+#### Using AltStore / Sidestore ([gh-pages branch](https://github.com/adamhurm/yj_nearbyglasses_ios/tree/gh-pages))
+In sources tab, Use \+ to add this URL:
+
+`https://adamhurm.github.io/yq_nearbyglasses_ios/altstore.json`
+
+After adding the source, you should see the NearbyGlasses app available for installation. 
+
+
+#### Install the .ipa ([releases page](https://github.com/adamhurm/yj_nearbyglasses_ios/releases))
+Go to the latest release on this GitHub repo and download the .ipa, then manually perform the integrity verification step. Sideload using AltStore/SideStore, Sideloadly, etc. per the guidance that the tool provides.
+
+⚠️ YOU'RE NOW HEADING TOWARD THE ORIGINAL README. Thanks for stopping by!
+
+---
 
 # yj_nearbyglasses
 attempting to detect smart glasses nearby and warn you.
