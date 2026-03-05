@@ -77,6 +77,7 @@ jobs:
             NearbyGlasses-${{ github.ref_name }}.ipa
             NearbyGlasses-${{ github.ref_name }}.ipa.sha256
           fail_on_unmatched_files: true
+          overwrite: true
 
       # AltStore source is NOT updated here.
       # It is updated separately by update-altstore-source.yml,
